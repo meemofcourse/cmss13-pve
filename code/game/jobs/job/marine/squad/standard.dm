@@ -67,11 +67,11 @@
 	title = JOB_SQUAD_MINUTEMAN
 	gear_preset = /datum/equipment_preset/cmm/minuteman
 	gear_preset_secondary = /datum/equipment_preset/cmm/minuteman/lesser_rank
-	job_options = list("First Class Sergeant" = "1LSGT", "Master Sergeant" = "LMSGT")
+	job_options = list("Second Class Leagueman" = "2LM", "Leagueman" = "LM")
 
 /datum/job/marine/standard/ai/cmm/handle_job_options(option)
 	. = ..()
-	if(option != "First Class Sergeant")
+	if(option != "Second Class Leagueman")
 		gear_preset = initial(gear_preset)
 	else
 		gear_preset = gear_preset_secondary
