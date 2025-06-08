@@ -3,8 +3,9 @@
 	title = JOB_CO
 	supervisors = "USCM high command"
 	selection_class = "job_co"
-	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADMIN_NOTIFY|ROLE_WHITELISTED
-	flags_whitelist = WHITELIST_COMMANDER
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADMIN_NOTIFY
+//	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADMIN_NOTIFY|ROLE_WHITELISTED // the stakes aren't as high as to need a whitelist role yknow
+//	flags_whitelist = WHITELIST_COMMANDER
 	gear_preset = /datum/equipment_preset/uscm_ship/commander
 
 /datum/job/command/commander/New()
@@ -56,3 +57,25 @@
 	name = JOB_CO
 	icon_state = "co_spawn"
 	job = /datum/job/command/commander
+
+/datum/job/command/commander/ai
+	prime_priority = TRUE
+
+/datum/job/command/commander/ai/cmm
+	title = JOB_CO_MINUTEMAN
+	entry_message_intro = "You are the Ship Captain."
+	entry_message_end = "Under normal circumstances, your only superior is the Confederated League's High Command. Up and at em, Cap'n."
+	gear_preset = /datum/equipment_preset/cmm/captain
+	gear_preset_secondary = /datum/equipment_preset/cmm/captain/lesser_rank
+
+	job_options = list("Captain" = "Cpt", "Major" = "Maj")
+
+/datum/job/command/commander/ai/cmm/generate_entry_message()
+	entry_message_body = "You are the Captain of the [MAIN_SHIP_NAME]. In addition to the defense of your ship, your goal is to supervise and make sure your team carries out their mission. Expect to recieve orders via fax or the telephone on your office shortly."
+	return ..()
+
+/obj/effect/landmark/start/captain/cmm
+	name = JOB_CO_MINUTEMAN
+	icon_state = "co_spawn"
+	job = /datum/job/command/commander/ai/cmm
+

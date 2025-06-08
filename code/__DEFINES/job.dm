@@ -18,6 +18,9 @@
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
 
+// shiptest
+#define SQUAD_CMM "Radinska Hunters"
+
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
 #define JOB_SQUAD_LEADER "Section Sergeant"
@@ -149,6 +152,18 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PLT_MED "Platoon Corpsman"
 #define JOB_PLT_SL "Platoon Squad Leader"
 #define JOB_SQUAD_TECH "Reconnaissance Support Technician"
+
+// shiptest
+
+// league minutemen
+#define JOB_CO_MINUTEMAN "C-MM Ship Captain"
+#define JOB_SQUAD_MINUTEMAN "C-MM Minuteman"
+#define JOB_SQUAD_MINUTEMAN_ENGI "C-MM Field Engineer"
+#define JOB_SQUAD_MINUTEMAN_MEDIC "C-MM Field Corpsman"
+// #define JOB_SQUAD_MINUTEMAN_SPECIALIST "C-MM Specialist"
+#define JOB_SQUAD_MINUTEMAN_SIGNALEER "C-MM Signaleer"
+#define JOB_SQUAD_MINUTEMAN_LEADER "C-MM Squad Leader"
+#define JOB_SQUAD_MINUTEMAN_TEAM_LEADER "C-MM Team Leader"
 
 // Used to add a timelock to a job. Will be passed onto derivatives
 #define AddTimelock(Path, timelockList) \

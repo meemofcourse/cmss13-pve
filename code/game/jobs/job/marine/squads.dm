@@ -323,6 +323,23 @@
 	locked = TRUE
 	faction = FACTION_WY_DEATHSQUAD
 
+//##############################
+
+/datum/squad/marine/cmm
+	name = SQUAD_CMM
+	equipment_color = "#26547F"
+	chat_color = "#4296E5"
+	access = list(ACCESS_LIST_MINUTEMEN_PLATOON)
+	squad_one_access = ACCESS_CMM_TEAM_ONE
+	squad_two_access = ACCESS_CMM_TEAM_TWO
+	radio_freq = CMM_FREQ
+	minimap_color = MINIMAP_SQUAD_CMM
+	use_stripe_overlay = FALSE
+	faction = FACTION_CMM
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
 
 //##############################
 

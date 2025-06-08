@@ -63,6 +63,19 @@
 	gear_preset = /datum/equipment_preset/uscm/pfc/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/lesser_rank
 
+/datum/job/marine/standard/ai/cmm
+	title = JOB_SQUAD_MINUTEMAN
+	gear_preset = /datum/equipment_preset/cmm/minuteman
+	gear_preset_secondary = /datum/equipment_preset/cmm/minuteman/lesser_rank
+	job_options = list("First Class Sergeant" = "1LSGT", "Master Sergeant" = "LMSGT")
+
+/datum/job/marine/standard/ai/cmm/handle_job_options(option)
+	. = ..()
+	if(option != "First Class Sergeant")
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/standard/ai/forecon
 	title = JOB_SQUAD_MARINE_FORECON
 	total_positions = 2
@@ -76,6 +89,21 @@
 	title = JOB_SQUAD_RTO
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
+
+/datum/job/marine/standard/ai/rto/cmm
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_MINUTEMAN_SIGNALEER
+	gear_preset = /datum/equipment_preset/cmm/rto
+	gear_preset_secondary = /datum/equipment_preset/cmm/rto/lesser_rank
+	job_options = list("Second Class Sergeant" = "2LSGT", "First Class Sergeant" = "1LSGT")
+
+/datum/job/marine/standard/ai/rto/cmm/handle_job_options(option)
+	. = ..()
+	if(option != "Second Class Sergeant")
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP

@@ -296,6 +296,10 @@
 	shuttle_tag = DROPSHIP_UPP
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/cmm
+	shuttle_tag = DROPSHIP_CMM
+	dir = SOUTH
+
 /turf/open/space/transit/south
 	dir = SOUTH
 

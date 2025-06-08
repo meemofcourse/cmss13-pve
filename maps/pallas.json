@@ -1,0 +1,9 @@
+{
+    "map_name": "Pallas-class Siege Breaker",
+    "map_path": "map_files/CMM_pallas",
+    "map_file": "pallas.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/pallas/",
+    "platoon": "/datum/squad/marine/cmm"
+}

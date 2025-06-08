@@ -54,6 +54,19 @@
 	gear_preset = /datum/equipment_preset/uscm/tl/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/tl/upp/lesser_rank
 
+/datum/job/marine/tl/ai/cmm
+	title = JOB_SQUAD_MINUTEMAN_TEAM_LEADER
+	gear_preset = /datum/equipment_preset/cmm/tl
+	gear_preset_secondary = /datum/equipment_preset/cmm/tl/lesser_rank
+	job_options = list("Second Class Sergeant" = "2LSGT", "First Class Sergeant" = "1LSGT")
+
+/datum/job/marine/tl/ai/cmm/handle_job_options(option)
+	. = ..()
+	if(option != "Second Class Sergeant")
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/tl/ai/forecon
 	total_positions = 1
 	spawn_positions = 1

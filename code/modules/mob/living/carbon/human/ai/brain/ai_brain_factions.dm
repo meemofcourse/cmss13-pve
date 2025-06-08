@@ -743,6 +743,12 @@
 		"I'M FUBAR, MAN!",
 	)
 
+/datum/human_ai_faction/cmm
+	faction = FACTION_CMM
+	friendly_factions = list()
+	neutral_factions = list()
+	enter_combat_lines = list()
+
 /datum/human_ai_faction/usa
 	faction = FACTION_ARMY
 	friendly_factions = list(

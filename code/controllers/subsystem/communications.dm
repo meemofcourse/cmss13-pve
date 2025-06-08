@@ -145,6 +145,8 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define ECHO_FREQ 1495
 #define CRYO_FREQ 1496
 
+#define CMM_FREQ 1497
+
 //Civilian channels
 #define COLONY_FREQ 1469
 
@@ -161,6 +163,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_UA_GUARD = GRD_FREQ,
 	RADIO_CHANNEL_DUTCH_DOZEN = DUT_FREQ,
 	RADIO_CHANNEL_ROYAL_MARINE = RMC_FREQ,
+	RADIO_CHANNEL_CMM = CMM_FREQ,
 
 	RADIO_CHANNEL_HIGHCOM = HC_FREQ,
 	RADIO_CHANNEL_PROVOST = PVST_FREQ,

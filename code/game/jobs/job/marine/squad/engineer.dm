@@ -27,6 +27,23 @@
 
 	return (slots*4)
 
+/datum/job/marine/engineer/ai
+	total_positions = 2
+	spawn_positions = 2
+
+/datum/job/marine/engineer/ai/cmm
+	title = JOB_SQUAD_MINUTEMAN_ENGI
+	gear_preset = /datum/equipment_preset/cmm/engineer
+	gear_preset_secondary = /datum/equipment_preset/cmm/engineer/lesser_rank
+	job_options = list("First Class Leagueman" = "1LM", "Second Class Sergeant" = "2LSGT")
+
+/datum/job/marine/engineer/ai/cmm/handle_job_options(option)
+	. = ..()
+	if(option != "Second Class Sergeant")
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/engineer/whiskey
 	title = JOB_WO_SQUAD_ENGINEER
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD

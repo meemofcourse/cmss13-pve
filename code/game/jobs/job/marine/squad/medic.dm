@@ -81,6 +81,21 @@
 	gear_preset = /datum/equipment_preset/uscm/medic/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/upp/lesser_rank
 
+/datum/job/marine/medic/ai/cmm
+	title = JOB_SQUAD_MINUTEMAN_MEDIC
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/cmm/medic
+	gear_preset_secondary = /datum/equipment_preset/cmm/medic/lesser_rank
+	job_options = list("First Class Leagueman" = "1LM", "Second Class Sergeant" = "2LSGT")
+
+/datum/job/marine/medic/ai/cmm/handle_job_options(option)
+	. = ..()
+	if(option != "Second Class Sergeant")
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
 /datum/job/marine/medic/ai/forecon
 	title = JOB_SQUAD_MEDIC_FORECON
 	gear_preset = /datum/equipment_preset/uscm/medic/forecon

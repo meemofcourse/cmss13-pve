@@ -23,6 +23,8 @@ endmap
 map chapaev
 endmap
 
+map pallas
+endmap
 
 map firefly
 endmap

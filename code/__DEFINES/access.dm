@@ -217,3 +217,18 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"
 ///All access levels associated with CLF
 #define ACCESS_LIST_CLF_ALL "CLF (ALL)"
+
+// shiptest
+#define ACCESS_LIST_MINUTEMEN_PLATOON "C-MM"
+
+// C-MM
+#define ACCESS_CMM_GENERAL 400
+#define ACCESS_CMM_MEDICAL 401
+#define ACCESS_CMM_ENGINEERING 402
+#define ACCESS_CMM_ARMORY 403
+#define ACCESS_CMM_OFFICERS 404
+
+#define ACCESS_CMM_FLAG_OFFICERS 405
+
+#define ACCESS_CMM_TEAM_ONE 406
+#define ACCESS_CMM_TEAM_TWO 407

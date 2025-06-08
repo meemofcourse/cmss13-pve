@@ -141,6 +141,18 @@
 /obj/docking_port/mobile/marine_dropship/upp/get_transit_path_type()
 	return /turf/open/space/transit/dropship/upp
 
+/obj/docking_port/mobile/marine_dropship/cmm
+	name = "Coeus-class"
+	id = DROPSHIP_CMM
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/cmm/get_transit_path_type()
+	return /turf/open/space/transit/dropship/cmm
+
 /obj/docking_port/mobile/marine_dropship/cyclone
 	name = "Cyclone"
 	id = DROPSHIP_CYCLONE
@@ -427,6 +439,10 @@
 /datum/map_template/shuttle/upp
 	name = "Akademia Nauk"
 	shuttle_id = DROPSHIP_UPP
+
+/datum/map_template/shuttle/cmm
+	name = "Coeus-class"
+	shuttle_id = DROPSHIP_CMM
 
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"

@@ -60,6 +60,25 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	gear_preset = /datum/equipment_preset/uscm/leader/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/lesser_rank
 
+/datum/job/marine/leader/ai/cmm
+	title = JOB_SQUAD_MINUTEMAN_LEADER
+	gear_preset = /datum/equipment_preset/cmm/leader
+	gear_preset_secondary = /datum/equipment_preset/cmm/leader/lesser_rank
+
+	job_options = list("First Class Sergeant" = "1LSGT", "Master Sergeant" = "LMSGT")
+
+/datum/job/marine/leader/ai/cmm/handle_job_options(option)
+	. = ..()
+	if(option != "First Class Sergeant")
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
+
+/obj/effect/landmark/start/marine/leader/cmm
+	name = JOB_SQUAD_MINUTEMAN_LEADER
+	squad = SQUAD_CMM
+	job = /datum/job/marine/leader/ai/cmm
+
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
